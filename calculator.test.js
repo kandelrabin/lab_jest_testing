@@ -65,17 +65,28 @@ describe('subtract', () => {
 });
 
 describe('multiply', () => {
-  test.skip('can add zero', () => {
-    
+  test('can multiply two positive numbers', () => {
+    expected = 10;
+    actual = multiply(5, 2);
+    expect(actual).toBe(expected);
   });
-  test.skip('can add zero', () => {
-    
+
+  test('can multiply large positive numubers', () => {
+    expected = 1000000;
+    actual = multiply(500, 2000);
+    expect(actual).toBe(expected);
   });
-  test.skip('can add zero', () => {
-    
+
+  test('can multiply two negative numbers', () => {
+    expected = 10;
+    actual = multiply(-5, -2);
+    expect(actual).toBe(expected);
   });
-  test.skip('can add zero', () => {
-    
+
+  test('can multiply by zero', () => {
+    expected = 0;
+    actual = multiply(5, 0);
+    expect(actual).toBe(expected);
   });
 
 });
