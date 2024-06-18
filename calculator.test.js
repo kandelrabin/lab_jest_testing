@@ -16,40 +16,119 @@ describe('sum', () => {
     expect(actual).toBe(expected);
   });
 
-  test.skip('can add two large positive numbers', () => { 
-    
+  test('can add two large positive numbers', () => { 
+    expected = 3000;
+    actual = sum(1000, 2000);
+    expect(actual).toBe(expected);
   });
 
-  test.skip('can add two negative numbers', () => {
-    
+  test('can add two negative numbers', () => {
+    expected = -10;
+    actual = sum(-9, -1);
+    expect(actual).toBe(expected);
   });
 
+  test('can add zero', () => {
+    expected = 10;
+    actual = sum(10, 0);
+    expect(actual).toBe(expected);
+  });
+
+});
+
+describe('subtract', () => {
+  test('can subtract two small positive numbers', () => {
+    expected = 4;
+    actual = subtract(10, 6);
+    expect(actual).toBe(expected);
+  });
+
+  test('can subtract two large positive numbers', () => {
+    expected = 9000;
+    actual = subtract(10000, 1000);
+    expect(actual).toBe(expected);
+  });
+
+  test('can subtract two negative numbers', () => {
+    expected = -5;
+    actual = subtract(-7,-2);
+    expect(actual).toBe(expected);
+  });
+
+  test('can subtract zero', () => {
+    expected = 5;
+    actual = subtract(5, 0);
+    expect(actual).toBe(expected);
+  });
+
+
+});
+
+describe('multiply', () => {
+  test.skip('can add zero', () => {
+    
+  });
+  test.skip('can add zero', () => {
+    
+  });
+  test.skip('can add zero', () => {
+    
+  });
   test.skip('can add zero', () => {
     
   });
 
 });
 
-describe('subtract', () => {
-
-});
-
-describe('multiply', () => {
-
-});
-
 describe('divide', () => {
+
+  test.skip('can add zero', () => {
+    
+  });
+  test.skip('can add zero', () => {
+    
+  });
+  test.skip('can add zero', () => {
+    
+  });
 
 });
 
 describe('modulus', () => {
+  test.skip('can add zero', () => {
+    
+  });
+  test.skip('can add zero', () => {
+    
+  });
+  test.skip('can add zero', () => {
+    
+  });
 
 });
 
 describe('even', () => {
+  test.skip('can add zero', () => {
+    
+  });
+  test.skip('can add zero', () => {
+    
+  });
+  test.skip('can add zero', () => {
+    
+  });
 
 });
 
 describe('odd', () => {
+  test.skip('can add zero', () => {
+    
+  });
+  test.skip('can add zero', () => {
+    
+  });
+  test.skip('can add zero', () => {
+    
+  });
 
 });
