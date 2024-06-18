@@ -132,14 +132,28 @@ describe('divide', () => {
 });
 
 describe('modulus', () => {
-  test.skip('can add zero', () => {
+  test('can return division remainder of zero', () => {
+    expected = 0;
+    actual = modulus(4, 2);
+    expect(actual).toBe(expected);
+  });
+
+  test('can return remainder for positive divsion', () => {
+    expected = 1;
+    actual = modulus(5, 2);
+    expect(actual).toBe(expected);
     
   });
-  test.skip('can add zero', () => {
-    
+  test('can return remainder for negative divsion', () => {
+    expected = -1;
+    actual = modulus(-7, 2);
+    expect(actual).toBe(expected);
   });
-  test.skip('can add zero', () => {
-    
+
+  test('can return remainder for non-integer divsion', () => {
+    expected = 1.5;
+    actual = modulus(7.5, 2);
+    expect(actual).toBe(expected);
   });
 
 });
