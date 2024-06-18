@@ -4,8 +4,8 @@ const {
   multiply,
   divide,
   modulus,
-  even,
-  odd,
+  isEven,
+  isOdd,
 } = require("./calculator");
 
 describe('sum', () => { 
@@ -159,27 +159,45 @@ describe('modulus', () => {
 });
 
 describe('even', () => {
-  test.skip('can add zero', () => {
-    
+  test('Can check positive even number', () => {
+    expected = true;
+    actual = isEven(4);
+    expect(actual).toBe(expected);
   });
-  test.skip('can add zero', () => {
-    
+
+  test('can check negative even number', () => {
+    expected = true;
+    actual = isEven(-10);
+    expect(actual).toBe(expected);
   });
-  test.skip('can add zero', () => {
-    
+
+
+  test('can check rational number with even decimal digit', () => {
+    expected = false;
+    actual = isEven(2.4);
+    expect(actual).toBe(expected);
   });
 
 });
 
 describe('odd', () => {
-  test.skip('can add zero', () => {
-    
+  test('Can check positive odd number', () => {
+    expected = true;
+    actual = isOdd(5);
+    expect(actual).toBe(expected);
   });
-  test.skip('can add zero', () => {
-    
+
+  test('can check negative odd number', () => {
+    expected = true;
+    actual = isOdd(-17);
+    expect(actual).toBe(expected);
   });
-  test.skip('can add zero', () => {
-    
+
+
+  test('can check rational number with even decimal digit', () => {
+    expected = false;
+    actual = isOdd(2.5);
+    expect(actual).toBe(expected);
   });
 
 });

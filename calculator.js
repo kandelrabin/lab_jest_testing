@@ -18,9 +18,17 @@ const modulus = function(a, b) {
     return a%b;
 }
 
-const even = null;
+const isEven = (a) => {
+    return a % 2 === 0;
+};
 
-const odd = null;
+const isOdd = (a) => {
+    if (Number.isInteger(a)) {
+        return a % 2 !== 0;
+    } else{
+        return false;
+    }
+};
 
 module.exports = { 
     sum, 
@@ -28,6 +36,6 @@ module.exports = {
     multiply, 
     divide, 
     modulus, 
-    even, 
-    odd 
+    isEven, 
+    isOdd 
 };
