@@ -19,12 +19,12 @@ const modulus = function(a, b) {
 }
 
 const isEven = (a) => {
-    return a % 2 === 0;
+    return modulus(a, 2) == 0;
 };
 
 const isOdd = (a) => {
     if (Number.isInteger(a)) {
-        return a % 2 !== 0;
+        return !isEven(a);
     } else{
         return false;
     }
