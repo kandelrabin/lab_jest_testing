@@ -93,14 +93,40 @@ describe('multiply', () => {
 
 describe('divide', () => {
 
-  test.skip('can add zero', () => {
-    
+  test('can divide a multiple by a number', () => {
+    expected = 2;
+    actual = divide(10, 5);
+    expect(actual).toBe(expected);
   });
-  test.skip('can add zero', () => {
-    
+
+  test('can divide a number by non integer', () => {
+    expected = 4;
+    actual = divide(1, 0.25);
+    expect(actual).toBe(expected);
   });
-  test.skip('can add zero', () => {
-    
+
+  test('can divide a number by negative number', () => {
+    expected = -2;
+    actual = divide(-10, 5);
+    expect(actual).toBe(expected);
+  });
+
+  test('can divide a number by non integer', () => {
+    expected = 4;
+    actual = divide(1, 0.25);
+    expect(actual).toBe(expected);
+  });
+
+  test('cannot divide by zero: positive infinity', () => {
+    expected = Infinity;
+    actual = divide(1, 0);
+    expect(actual).toBe(expected);
+  });
+
+  test('cannot divide by zero: minus infinity', () => {
+    expected = -Infinity;
+    actual = divide(-5, 0);
+    expect(actual).toBe(expected);
   });
 
 });
