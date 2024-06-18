@@ -34,6 +34,26 @@ describe('sum', () => {
     expect(actual).toBe(expected);
   });
 
+ // extension
+
+ test('can add two large positive numbers', () => {
+  expected = 20e100;
+  actual = sum(10e100, 10e100);
+  expect(actual).toBe(expected);
+});
+
+test('can add two non-integers', () => {
+  expected = 5;
+  actual = sum(3.5,  1.5);
+  expect(actual).toBe(expected);
+});
+
+
+
+
+
+
+
 });
 
 describe('subtract', () => {
@@ -60,6 +80,14 @@ describe('subtract', () => {
     actual = subtract(5, 0);
     expect(actual).toBe(expected);
   });
+
+  // extension
+
+  test('can subtract two large positive numbers', () => {
+    actual = subtract(10e1000000, 5e1000000);
+    expect(actual).toBeNaN();
+  });
+
 
 
 });
@@ -89,6 +117,14 @@ describe('multiply', () => {
     expect(actual).toBe(expected);
   });
 
+
+    // extension
+
+    test('can multiply two large positive numbers', () => {
+      actual = multiply(10e1000000, 5e1000000);
+      expect(actual).toBe(Infinity);
+    });
+  
 });
 
 describe('divide', () => {
@@ -128,6 +164,13 @@ describe('divide', () => {
     actual = divide(-5, 0);
     expect(actual).toBe(expected);
   });
+
+    // extension
+
+    test('can divide two large positive numbers', () => {
+      actual = divide(10e1000000, 5e1000000);
+      expect(actual).toBeNaN();
+    });
 
 });
 
